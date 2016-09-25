@@ -480,12 +480,12 @@ describe('generator - `yield` is used to pause and resume a generator function',
     });
 
     it('`value` is "world"', function() {
-      let {value} = secondItem;
+      let {value} = generator.next(secondItem);
       assert.equal(value, 'world');
     });
 
     it('and `done` is still false', function() {
-      const done = secondItem;
+      const done = secondItem.done;
       assert.equal(done, false);
     });
   });
@@ -495,7 +495,7 @@ describe('generator - `yield` is used to pause and resume a generator function',
     it('`done` property equals true, since there is nothing more to iterator over', function() {
       generator.next();
       generator.next();
-      let done = generator.done;
+      let done = generator.next().done;
       assert.equal(done, true);
     });
 
