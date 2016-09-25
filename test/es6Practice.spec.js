@@ -169,7 +169,6 @@ describe('`Map` is a key/value map', function(){
     map.set('2', 'two');
     const mapAsArray = Array.from(map, (value) => value); // hint: kata #29 http://tddbin.com/#?kata=es6/language/array-api/from
 
-
     assert.deepEqual(mapAsArray, [['1', 'one'], ['2', 'two']]);
   });
 
@@ -196,7 +195,7 @@ describe('`Set` lets you store unique values of any type', function(){
     let set = new Set();
 
     set.add(1);
-    set.add(1);
+    set.add(2);
     const expectedSize = 2;
 
     assert.equal(set.size, expectedSize);
@@ -205,6 +204,7 @@ describe('`Set` lets you store unique values of any type', function(){
   it('the string "1" is different to the number 1', function() {
     let set = new Set();
     set.add(1);
+    set.add('1');
 
     assert.equal(set.size, 2);
   });
