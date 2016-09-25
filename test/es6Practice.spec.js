@@ -348,7 +348,7 @@ describe('default parameters make function parameters more flexible', () => {
   });
 
   it('it can also be a function', function() {
-    let defaultValue;
+    let defaultValue = function (){};
     function fn(value = defaultValue()) {
       return value;
     }
