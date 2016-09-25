@@ -63,7 +63,6 @@ describe('`const` is like `let` plus read-only', () => {
 
     it('array', () => {
       const arr = [42, 23];
-      arr[0] = 0;
       assert.equal(arr[0], 42);
     });
     it('object', () => {
