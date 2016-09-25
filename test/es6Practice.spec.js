@@ -67,7 +67,7 @@ describe('`const` is like `let` plus read-only', () => {
     });
     it('object', () => {
       const obj = {x: 1};
-      obj.x = 2;
+      obj.x = 3;
       assert.equal(obj.x, 3);
     });
   });
