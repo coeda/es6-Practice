@@ -44,7 +44,6 @@ describe('`const` is like `let` plus read-only', () => {
 
     it('number', () => {
       const constNum = 0;
-      constNum = 1;
       assert.equal(constNum, 0);
     });
 
